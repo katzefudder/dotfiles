@@ -59,6 +59,7 @@ set hidden
 set title
 set nobackup
 set noswapfile
+set laststatus=2
 syntax on
 
 " Window width for NERDtree
