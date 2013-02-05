@@ -36,6 +36,10 @@ if executable('./execute_on_save.sh')
 	autocmd BufWritePost * :call system('./execute_on_save.sh')
 endif
 
+" Do not add an automatic new line for PHP files
+autocmd BufRead *.php :set binary
+autocmd BufRead *.php :set noendofline
+
 " map <C-j> :FufBuffer <Return>
 " map <C-k> :FufFile <Return>
 
