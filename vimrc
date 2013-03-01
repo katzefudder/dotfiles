@@ -64,6 +64,11 @@ set title
 set nobackup
 set noswapfile
 set laststatus=2
+
+set modeline
+set modelines=4 
+
+set list
 syntax on
 
 " Window width for NERDtree
@@ -92,5 +97,5 @@ hi CursorLine cterm=none " Overwrite cursor line style
 set cursorline
 
 " Syntastic syntax checker
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['php'], 'passive_filetypes': ['sh'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['php', 'python'], 'passive_filetypes': ['sh'] }
 
