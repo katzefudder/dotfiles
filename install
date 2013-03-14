@@ -8,5 +8,5 @@ cp -r vim/* ~/.vim
 cp tmux.conf ~/.tmux.conf
 
 # copy diff scripts
-cp misc/sv* ~/bin
+cp misc/* ~/bin
 
