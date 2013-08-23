@@ -1,0 +1,26 @@
+[user]
+	name = 4dma
+	email = ***
+[alias]
+	st = status -sb
+	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	vimdiff = difftool -t vimdiff
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = cyan
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+

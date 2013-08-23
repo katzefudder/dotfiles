@@ -4,8 +4,14 @@
 cp vimrc ~/.vimrc
 cp -r vim/* ~/.vim
 
+# bash
+cp -r bash_custom ~/.bash_custom
+
 # tmux
 cp tmux.conf ~/.tmux.conf
+
+# git
+cp gitconfig ~/.gitconfig
 
 # copy diff scripts
 cp misc/* ~/bin

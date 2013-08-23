@@ -97,7 +97,7 @@ hi CursorLine cterm=none " Overwrite cursor line style
 set cursorline
 
 " Syntastic syntax checker
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['php', 'python'], 'passive_filetypes': ['sh'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['php', 'python', 'xml'], 'passive_filetypes': ['sh'] }
 
 " Closetag vim
  :au Filetype html,xml,xsl,ctp,php source ~/.vim/bundle/closetag/closetag.vim

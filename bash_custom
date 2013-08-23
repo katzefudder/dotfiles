@@ -1,0 +1,38 @@
+#
+# Put current lampp version on path...
+#
+PATH=~/bin:$PATH
+PATH=$PATH:/opt/lampp/bin
+export EDITOR=vim
+
+alias rgrep='grep --exclude=\*.svn\* -n -r'
+alias go='gnome-open'
+alias tmux='TERM=xterm-256color; tmux -2'
+
+#
+# This is to support 256 color vim inside tmux.
+#
+TERM=screen-256color
+
+#
+# Marks...
+# mark <name>
+# jump <name>
+# unmark <name>
+# marks
+#
+export MARKPATH=$HOME/.marks
+
+function jump {
+	    cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+	    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+}
+function unmark {
+	    rm -i $MARKPATH/$1
+}
+function marks {
+	    ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f8- | sed 's/ -/\t-/g' && echo
+}
+
