@@ -8,6 +8,7 @@ export EDITOR=vim
 alias rgrep='grep --exclude=\*.svn\* -n -r'
 alias go='gnome-open'
 alias tmux='TERM=xterm-256color; tmux -2'
+alias j='jump'
 
 #
 # This is to support 256 color vim inside tmux.
@@ -24,15 +25,15 @@ TERM=screen-256color
 export MARKPATH=$HOME/.marks
 
 function jump {
-	    cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
+	cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
 function mark {
-	    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+	mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
 }
 function unmark {
-	    rm -i $MARKPATH/$1
+	rm -i $MARKPATH/$1
 }
 function marks {
-	    ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f8- | sed 's/ -/\t-/g' && echo
+	ls -l ~/.marks | awk '/^l/ {print $8 " -> " $10}' | column -t
 }
 
