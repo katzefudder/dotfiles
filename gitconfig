@@ -4,6 +4,7 @@
 [alias]
 	st = status -sb
 	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ll = log --oneline --graph --decorate --all
 	vimdiff = difftool -t vimdiff
 [color]
 	branch = auto
