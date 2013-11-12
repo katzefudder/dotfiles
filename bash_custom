@@ -1,7 +1,7 @@
 #
 # Put current lampp version on path...
 #
-PATH=~/bin:$PATH
+PATH=~/bin:./bin:$PATH
 PATH=$PATH:/opt/lampp/bin
 export EDITOR=vim
 
@@ -34,6 +34,25 @@ function unmark {
 	rm -i $MARKPATH/$1
 }
 function marks {
-	ls -l ~/.marks | awk '/^l/ {print $8 " -> " $10}' | column -t
+	ls -l ~/.marks | awk '/^l/ {print $9 " -> " $11}' | column -t
 }
+
+_jump() {
+	local cur="${COMP_WORDS[COMP_CWORD]}"
+	local result=$(compgen -d "$MARKPATH/$cur" -- "$cur")
+
+	if [[ -n "$result" && $(echo "$result" | wc -l) -eq 1 ]]; then
+	result+="/"
+	fi
+
+	COMPREPLY=( $(echo "$result" | sed -e "s#$MARKPATH/##") )
+}
+
+_unmark() {
+	local cur="${COMP_WORDS[COMP_CWORD]}"
+	COMPREPLY=( $(compgen -W "`ls ~/.marks`" -- ${cur}) )
+}
+
+complete -A file -o nospace -F _jump jump
+complete -F _unmark unmark
 
