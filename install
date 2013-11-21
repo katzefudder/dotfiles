@@ -1,6 +1,10 @@
 #/bin/sh
 
 # vim stuff
+if [ ! -d ~/.vim ]; then
+	mkdir ~/.vim
+fi
+
 cp vimrc ~/.vimrc
 cp -r vim/* ~/.vim
 
@@ -14,5 +18,9 @@ cp tmux.conf ~/.tmux.conf
 cp gitconfig ~/.gitconfig
 
 # copy diff scripts
+if [ ! -d ~/bin ]; then
+	mkdir ~/bin
+fi
+
 cp misc/* ~/bin
 
