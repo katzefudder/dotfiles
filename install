@@ -22,5 +22,5 @@ if [ ! -d ~/bin ]; then
 	mkdir ~/bin
 fi
 
-cp misc/* ~/bin
+cp bin/* ~/bin
 
