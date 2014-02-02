@@ -4,6 +4,7 @@
 PATH=~/bin:./bin:$PATH
 PATH=$PATH:/opt/lampp/bin
 export EDITOR=vim
+export PYTHONPATH=$PYTHONPATH:~/Development/github/powerline
 
 alias rgrep='grep --exclude=\*.svn\* -n -r'
 alias go='gnome-open'

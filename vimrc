@@ -102,3 +102,14 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['php', 'pyth
 " Closetag vim
  :au Filetype html,xml,xsl,ctp,php source ~/.vim/bundle/closetag/closetag.vim
 
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+" This highlights the background from column 100 on
+function! Columns()
+	highlight ColorColumn ctermbg=235 guibg=#2c2d27
+	let &colorcolumn="100,".join(range(100,999),",")
+endfunction
+
