@@ -22,4 +22,13 @@ if [ ! -d ~/bin ]; then
 	mkdir ~/bin
 fi
 
-cp bin/* ~/bin
+SEARCH_FOLDER="./bin/*"
+for f in $SEARCH_FOLDER
+do
+	for ff in $f
+	do
+		if [ -r "$ff" ]; then
+			ln -s $ff ~/bin
+		fi
+	done
+done

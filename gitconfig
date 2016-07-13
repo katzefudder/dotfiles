@@ -1,6 +1,6 @@
 [user]
-	name = 4dma
-	email = ***
+	name = Florian Dehn
+	email = flo@katzefudder.de
 [alias]
 	st = status -sb
 	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
