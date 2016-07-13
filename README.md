@@ -11,6 +11,8 @@ For bash config add this to your .bashrc:
 
 <pre>
 if [ -f ~/.bash_custom ]; then
+	autoload bashcompinit
+	bashcompinit
 	. ~/.bash_custom
 fi
 </pre>
