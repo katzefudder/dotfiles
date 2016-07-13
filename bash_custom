@@ -54,6 +54,8 @@ _unmark() {
 	COMPREPLY=( $(compgen -W "`ls ~/.marks`" -- ${cur}) )
 }
 
+autoload bashcompinit
+bashcompinit
 complete -A file -o nospace -F _jump jump
 complete -F _unmark unmark
 
