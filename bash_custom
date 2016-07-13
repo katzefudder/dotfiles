@@ -2,7 +2,6 @@
 # Put current lampp version on path...
 #
 PATH=~/bin:./bin:$PATH
-PATH=$PATH:/opt/lampp/bin
 export EDITOR=vim
 export PYTHONPATH=$PYTHONPATH:~/Development/github/powerline
 
