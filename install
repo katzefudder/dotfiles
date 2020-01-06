@@ -1,34 +1,13 @@
 #/bin/sh
 
-# vim stuff
-if [ ! -d ~/.vim ]; then
-	mkdir ~/.vim
-fi
-
-ln -s vimrc .vimrc
-ln -s vim ~/.vim
+ln -sf $(pwd)/vimrc .vimrc
+ln -sf $(pwd)/vim ~/.vim
 
 # bash
-ln -s bash_custom ~/.bash_custom
+ln -sf $(pwd)/bash_custom ~/.bash_custom
 
 # tmux
-ln -s tmux.conf ~/.tmux.conf
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 
 # git
-ln -s gitconfig ~/.gitconfig
-
-# copy diff scripts
-if [ ! -d ~/bin ]; then
-	mkdir ~/bin
-fi
-
-SEARCH_FOLDER="./bin/*"
-for f in $SEARCH_FOLDER
-do
-	for ff in $f
-	do
-		if [ -r "$ff" ]; then
-			ln -s $ff ~/bin
-		fi
-	done
-done
+ln -sf $(pwd)/gitconfig ~/.gitconfig

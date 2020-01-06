@@ -1,14 +1,12 @@
-#
-# Put current lampp version on path...
-#
-PATH=~/bin:./bin:$PATH
 export EDITOR=vim
-export PYTHONPATH=$PYTHONPATH:~/Development/github/powerline
 
 alias rgrep='grep --exclude=\*.svn\* -n -r'
 alias go='gnome-open'
 alias tmux='TERM=xterm-256color; tmux -2'
 alias j='jump'
+
+alias dc='docker-compose'
+alias ll='ls -la'
 
 #
 # This is to support 256 color vim inside tmux.
