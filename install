@@ -1,5 +1,25 @@
 #/bin/sh
 
+# install powerline fonts
+git clone git@github.com:powerline/fonts.git /tmp/powerline
+/tmp/powerline/install.sh
+rm -Rf /tmp/powerline
+
+# install ohmyzsh
+curl -L http://install.ohmyz.sh | sh
+
+# ZSH THEME
+sed -i -e 's/ZSH_THEME=robbyrussell/ZSH_THEME=agnoster/g' ~/.zshrc
+
+# add plugins for ohmyzsh
+sed -i -e 's/plugins=(git)/plugins=(git,ansible,aws,brew,cask,composer,docker,gem,go,grunt,iterm2,node,osx,pip,python,ruby,screen,supervisor,tmux,vagrant,vscode)/g' ~/.zshrc
+
+# when using Iterm2, some key mappings will not work out as expected
+# Profiles -> Open Profiles...
+# Edit Profiles...
+# Keys tab
+# From Load Preset... drop-down, pick Terminal.app compatibility
+
 ln -sf $(pwd)/vimrc .vimrc
 ln -sf $(pwd)/vim ~/.vim
 
