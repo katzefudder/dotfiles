@@ -1,0 +1,32 @@
+[user]
+	name = Florian Dehn
+	email = florian.dehn@otto.de
+[alias]
+	st = status -sb
+	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ll = log --oneline --graph --decorate --all
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = cyan
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[core]
+	excludesfile = /Users/flo/.gitignore
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main

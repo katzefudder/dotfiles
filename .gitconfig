@@ -1,0 +1,6 @@
+[includeIf "gitdir:~/Code/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/Work/"]
+  path = ~/.gitconfig-work
+[core]
+	autocrlf = input

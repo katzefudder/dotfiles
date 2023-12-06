@@ -24,3 +24,9 @@
 	changed = green
 	untracked = cyan
 
+[core]
+	excludesfile = /Users/flo/.gitignore
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
