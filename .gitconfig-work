@@ -1,6 +1,6 @@
 [user]
 	name = Florian Dehn
-	email = florian.dehn@otto.de
+	email = florian.dehn@bechtle.de
 [alias]
 	st = status -sb
 	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
