@@ -7,6 +7,10 @@ alias j='jump'
 
 alias dc='docker-compose'
 alias ll='ls -la'
+alias k='kubectl'
+alias tm='terramate'
+alias tg="terragrunt"
+alias tf="terraform"
 
 #
 # This is to support 256 color vim inside tmux.
